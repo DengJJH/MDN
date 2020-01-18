@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Images in HTML</title>
+</head>
+
+<body>
+    <h1>Images in HTML</h1>
+
+    <!-- 如果你需要改变图片的尺寸，你应该使用CSS而不是HTML -->
+    <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+        alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿" width="400" height="341" title="曼彻斯特大学博物馆展出的一只霸王龙的化石">
+
+    <hr />
+
+    <!-- 利用figure与figcaption通过为图片搭配说明文字的方式来解说图片 -->
+    <p>注意 <code>figure</code> 里不一定要是一张图片，只要是一个这样的独立内容单元：</p>
+    <ul>
+        <li>用简洁、易懂的方式表达意图。</li>
+        <li>可以置于页面线性流的某处。</li>
+        <li>为主要内容提供重要的补充说明。</li>
+    </ul>
+    <p><code>figure</code>可以是几张图片、一段代码、音视频、方程、表格或别的。</p>
+    <br/>
+    <figure>
+        <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+            alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。" width="400" height="341">
+        <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
+    </figure>
+
+</body>
+
+</html>

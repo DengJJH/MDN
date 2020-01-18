@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 学习<video> 和 <audio> 两个标签 -->
+    <!-- 还将会看看如何为你的视频添加字幕。 -->
+    <h2>video标签</h2>
+    <!-- 视频应当包括 WebM 和 MP4 两种格式，这两种在目前已经足够支持大多数平台和浏览器。 -->
+    <h3>html中video api的实例</h3>
+    <video controls>
+        <!-- type属性是可选的，但是建议加上 -->
+        <source src="rabbit320.mp4" type="video/mp4">
+        <source src="rabbit320.webm" type="video/mp4">
+        <p>您的浏览器不支持HTML5视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+    </video>
+
+    <hr />
+    <h3>html5中video api的实例</h3>
+    <!-- HTML5里面的特性 -->
+    <!-- 这里的width、height、autoplay、loop、muted和poster都是html5里新增的特性 -->
+    <!-- 宽高显而易见，其他属性从英文含义中可以看出，autoplay控制立即播放、
+    loop控制循环播放、muted控制是否静音、poster指向一个图片的url，用于视频播放前的显示 -->
+
+    <!-- 还有一个比较有用的preload属性这里没有被使用到，其用来缓冲比较大的文件，有3个值可以选 -->
+    <!-- 1、none：不缓冲
+    2、auto：页面加载后缓存媒体文件
+    3、metadata：仅缓冲文件的元数据 -->
+
+    <video controls width="400" height="400" autoplay loop muted poster="poster.png">
+        <source src="rabbit320.mp4" type="video/mp4">
+        <source src="rabbit320.webm" type="video/webm">
+        <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+    </video>
+
+    <hr />
+    <h2>audio标签</h2>
+    <audio controls>
+        <source src="viper.mp3" type="audio/mp3">
+        <source src="viper.ogg" type="audio/ogg">
+        <p>你的浏览器不支持 HTML5 音频，可点击<a href="viper.mp3">此链接</a>收听。</p>
+    </audio>
+    <h3>与video的差异：</h3>
+    <ul>
+        <li>audio标签不支持width/height属性，其没有视觉部件</li>
+        <li>同时也不支持poster属性</li>
+    </ul>
+
+    <hr />
+    <h2>显示音轨文本</h2>
+    <ul>
+        <li>许多人患有听觉障碍（通常来说是很难听清声音的人，或者聋人），所以他们不能听见音频中的声音。</li>
+        <li>另外的情况可能是由于人们并不能听音频，可能是因为他们在一个非常嘈杂的环境当中（比如在一个拥挤的酒吧内恰好赶上了球赛 ），也可能是由于他们并不想打扰到其他人（比如在一个十分安静的地方，例如图书馆）。</li>
+        <li>有一些人他们不说音频当中的语言，所以他们听不懂，因此他们想要一个副本或者是翻译来帮助他们理解媒体内容。</li>
+    </ul>
+    <p>给那些听不懂音频语言的人们提供一个音频内容的副本岂不是一件很棒的事情吗？所以，感谢 HTML5 video使之成为可能，有了 WebVTT 格式，你可以使用
+        track标签。
+    </p>
+    <p>WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了众多的字符串，这些字符串会带有一些元数据，它们可以用来描述这个字符串将会在视频中显示的时间，甚至可以用来描述这些字符串的样式以及定位信息。这些字符串叫做 cues
+        ，你可以根据不同的需求来显示不同的样式，最常见的如下：</p>
+    <ul>
+        <h3>subtitle</h3>
+        <li>通过添加翻译字幕，来帮助那些听不懂外国语言的人们理解音频当中的内容。</li>
+        <h3>captions</h3>
+        <li>同步翻译对白，或是描述一些有重要信息的声音，来帮助那些不能听音频的人们理解音频中的内容。</li>
+        <h3>timed descriptions</h3>
+        <li>将文字转换为音频，用于服务那些有视觉障碍的人。</li>
+    </ul>
+    <!-- 
+    1、以 .vtt 后缀名保存文件。
+    2、用 <track> 标签链接 .vtt 文件， <track> 标签需放在 <audio> 或 <video> 标签当中，
+        同时需要放在所有 <source> 标签之后。使用 kind 属性来指明是哪一种类型，
+            如 subtitles 、 captions 、 descriptions。然后，使用 srclang 
+            来告诉浏览器你是用什么语言来编写的 subtitles。 -->
+    <hr />
+    <h2>点击该<a
+            href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#显示音轨文本">链接</a>了解更多WEBVTT内容
+    </h2>
+    <br />
+    <br />
+</body>
+
+</html>
