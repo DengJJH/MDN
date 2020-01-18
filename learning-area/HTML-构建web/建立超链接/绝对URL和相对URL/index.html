@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>绝对URL： 指向由其在Web上的绝对位置定义的位置，包括 protocol(协议) and domain name（域名）.。像下面的例子,如果index.html 页面上传到projects这一个目录 。并且projects目录位于web服务站点的根目录, web站点的域名为http://www.example.com, 那么这个页面就可以通过http://www.example.com/projects/index.html访问 ( 或者通过http://www.example.com/projects/来访问, 因为在没有指定特定的URL的情况下，大多数web服务会默认访问加载index.html这类页面)</p>
+
+    <p>相对URL： 指向与您链接的文件相关的位置，更像我们在前面一节中所看到的位置。例如，如果我们想从示例文件链接http://www.example.com/projects/index.html转到相同目录下的一个PDF文件, URL就是文件名URL — 例如 project-brief.pdf —没有其他的信息要求. 如果PDF文件能够在projects的子目录pdfs中访问到, 相对路径就是pdfs/project-brief.pdf (对应的绝对URL就是 http://www.example.com/projects/pdfs/project-brief.pdf.)</p>
+    <p>一个相对URL将指向不同的位置，这取决于它所在的文件所在的位置——例如，如果我们把index.html 文件 从 projects 目录移动出来并进入Web站点的根目录（最高级别，而不是任何目录中），  pdfs/project-brief.pdf 的相对URL将会指向http://www.example.com/pdfs/project-brief.pdf, 而不是http://www.example.com/projects/pdfs/project-brief.pdf.</p>
+    <!-- 当您链接到要下载的资源而不是在浏览器中打开时，
+    您可以使用 download 属性来提供一个默认的保存文件名
+    （译注：此属性仅适用于同源URL）。下面是一个下载链接到Firefox 
+    的 Windows最新版本的示例： -->
+    <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+        download="firefox-latest-64bit-installer.exe">
+        Download Latest Firefox for Windows (64-bit) (English, US)
+    </a>
+
+    <!-- 电子邮件链接 -->
+    <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+
+</body>
+
+</html>
