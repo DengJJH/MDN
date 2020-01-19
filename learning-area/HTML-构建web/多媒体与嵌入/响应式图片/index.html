@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- name="viewport" content="width=device-width">: 
+        这行代码会强制地让手机浏览器采用它们真实可视窗口的宽度来加载网页 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>响应式图片</h1>
+
+    <!-- 老旧的浏览器不支持这些特性，它会忽略这些特征。并继续正常加载 src属性引用的图像文件。 -->
+    <img srcset="elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w" sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+             800px" src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"> <!-- sizes中的800px是默认选项 -->
+</body>
+
+</html>

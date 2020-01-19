@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>在网页中添加矢量图形</h1>
+    <p>位图与矢量图</p>
+    <ul>
+        <li>位图使用像素网格来定义 — 一个位图文件精确得包含了每个像素
+            的位置和它的色彩信息。流行的位图格式包括 Bitmap (.bmp), PNG (.png), JPEG (.jpg), and GIF (.gif.)</li>
+        <li>矢量图使用算法来定义 — 一个矢量图文件包含了图形和路径的定义，
+            电脑可以根据这些定义计算出当它们在屏幕上渲染时应该呈现的样子。
+            SVG 格式可以让我们创造用于 Web 的精彩的矢量图形。</li>
+    </ul>
+    <p>位图放大会模糊，而矢量图放大不会受到影响</p>
+
+    <h1>图片对比</h1>
+    <img src="star.png" alt="这是一个位图" title="这是一个位图">
+    <img src="star.svg" alt="这是一个矢量图" title="这是一个矢量图">
+    <p>旧版浏览器不支持SVG，因此如果您需要在网站上支持旧版本的 IE，则可能不适合（SVG从IE9开始得到支持）</p>
+
+    <h2>将svg添加到页面</h2>
+    <svg width="300" height="200">
+        <rect width="100%" height="100%" fill="green" />
+    </svg>
+
+    <svg width="100%" height="100%">
+        <rect width="100%" height="100%" fill="red" />
+        <circle cx="100%" cy="100%" r="120" fill="blue" stroke="black" />
+        <polygon points="120,0 240,225 0,225" fill="green" />
+        <text x="50" y="100" font-family="Verdana" font-size="55" fill="white" stroke="black" stroke-width="2">
+            Hello!
+        </text>
+    </svg>
+
+</body>
+
+</html>
