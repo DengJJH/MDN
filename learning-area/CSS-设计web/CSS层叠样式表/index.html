@@ -1,22 +1,65 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Getting started with CSS</title>
 </head>
+<style>
+    li {
+        /* square可以将li前的点改成框框 */
+        list-style-type: none;
+    }
+
+    .special {
+        color: orange;
+        font-weight: bold;
+    }
+
+    li em {
+        color: rebeccapurple;
+    }
+
+    /* 设置直接出现在标题后面并且与标题具有相同层级的段落样式，为此需在两个选择器之间添加一个 + 号 (成为 相邻兄弟组合器)  */
+    h1+p {
+        font-size: 200%;
+    }
+
+    li span {
+        color: red
+    }
+
+    a:link {
+        color: pink;
+    }
+
+    a:visited {
+        color: green;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    body h1+p .special {
+        color: yellow;
+        background-color: black;
+        padding: 5px;
+    }
+</style>
 
 <body>
-    
+
     <h1>I am a level one heading</h1>
 
-    <p>This is a paragraph of text. In the text is a <span>span element</span> 
-and also a <a href="http://example.com">link</a>.</p>
+    <p>This is a paragraph of text. In the text is a <span class="special">span element</span>
+        and also a <a href="http://example.com">link</a>.</p>
 
     <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
 
     <ul>
-        <li>Item one</li>
-        <li>Item two</li>
+        <li>Item <span>one</span></li>
+        <li class="special">Item two</li>
         <li>Item <em>three</em></li>
     </ul>
 
