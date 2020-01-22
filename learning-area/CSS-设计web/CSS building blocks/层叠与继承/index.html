@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 测试继承例子的样式 */
+        /* border和padding没有被直接子元素li与后代的ul列表继承 */
+        .main {
+            color: rebeccapurple;
+            border: 2px solid #ccc;
+            padding: 2em;
+            margin: 1em;
+        }
+
+        /* color和font-weight属性可以被继承 */
+        .special {
+            color: black;
+            font-weight: bold;
+        }
+
+        /* 说明控制继承例子的样式 */
+        body {
+            color: green;
+        }
+
+        .my-class-1 a {
+            color: inherit;
+        }
+
+        .my-class-2 a {
+            color: initial;
+        }
+
+        .my-class-3 a {
+            color: unset;
+        }
+
+        /* a {
+            color: red;
+        } */
+        /* 我自己例子的样式 */
+        span {
+            background-color: red;
+            color: black;
+        }
+
+        h4 {
+            background-color: #ccc;
+            color: cornflowerblue;
+            width: 4rem;
+            text-align: center;
+        }
+
+        /* 说明all：unset例子的样式 */
+        blockquote {
+            background-color: red;
+            border: 2px solid green;
+        }
+
+        .fix-this {
+            all: unset;
+        }
+
+
+        /* 说明层叠例子的样式 */
+
+        /* specificity: 0101 */
+        #outer a {
+            background-color: red;
+        }
+
+        /* specificity: 0201 */
+        #outer #inner a {
+            background-color: blue;
+        }
+
+        /* specificity: 0104 */
+        #outer div ul li a {
+            color: yellow;
+        }
+
+        /* specificity: 0113 */
+        #outer div ul .nav a {
+            color: white;
+        }
+
+        /* specificity: 0024 */
+        div div li:nth-child(2) a:hover {
+            border: 10px solid black;
+        }
+
+        /* specificity: 0023 */
+        div li:nth-child(2) a:hover {
+            border: 10px dashed black;
+        }
+
+        /* specificity: 0033 */
+        div div .nav:nth-child(2) a:hover {
+            border: 10px double black;
+        }
+
+        /* 
+        a {
+            display: inline-block;
+            line-height: 40px;
+            font-size: 20px;
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        } */
+
+
+        /* !important例子的样式 */
+        #winning {
+            background-color: red;
+            border: 1px solid black;
+            color: white;
+            padding: 5px;
+        }
+
+        .better {
+            background-color: gray;
+            border: none !important;
+            color: white;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul class="main">
+        <li>Item One</li>
+        <li>Item Two
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+            </ul>
+        </li>
+        <li>Item Three
+            <ul class="special">
+                <li>3.1
+                    <ul>
+                        <li>3.1.1</li>
+                        <li>3.1.2</li>
+                    </ul>
+                </li>
+                <li>3.2</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>控制继承</h2>
+    <span>没有很好理解</span>
+    <h3>css为控制继承提供了四个特殊的通用属性值。每个css属性都接收这些值</h3>
+    <h4>inherit</h4>
+    <p>设置该属性会使子元素属性和父元素相同。实际上就相当于开启继承</p>
+    <h4>initial</h4>
+    <p>设置属性值和浏览器默认样式相同。如果浏览器默认样式中未设置且该属性使自然继承的，那么会设置为inherit</p>
+    <h4>unset</h4>
+    <p>将属性重置为自然值，也就是如果属性使自然继承那么就是inherit，否则和initial一样</p>
+    <p><strong>还有一个新的属性，revert只有很少的浏览器支持</strong></p>
+    <ul>
+        <li>Default <a href="#">link</a> color</li>
+        <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+        <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+        <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+    </ul>
+
+    <hr />
+    <h2>重设所有属性值</h2>
+    <blockquote>
+        <p>This blockquote is styled</p>
+    </blockquote>
+
+    <blockquote class="fix-this">
+        <p>This blockquote is not styled</p>
+    </blockquote>
+
+    <hr />
+    <h2>理解层叠</h2>
+    <ol>
+        <li>重要程度</li>
+        <li>优先级</li>
+        <ol>
+            <li>千位：内联样式的时候该位得一分</li>
+            <li>百位：ID选择器该位得一分</li>
+            <li>十位：选择其中的类选择器、属性选择器或者伪类则该位得一分</li>
+            <li>个位：选择其中的元素、伪元素选择器则该位得一分</li>
+        </ol>
+        <p>注: 通用选择器 (*)，组合符 (+, >, ~, ' ')，和否定伪类 (:not) 不会影响优先级。</p>
+        <li>资源顺序
+            <ul>
+                <li>多条相同权重的规则，那么最后面的规则会被应用，可以理解为后面的规则会覆盖前面的规则。</li>
+            </ul>
+        </li>
+    </ol>
+
+    <div id="outer" class="container">
+        <div id="inner" class="container">
+            <ul>
+                <li class="nav"><a href="#">One</a></li>
+                <li class="nav"><a href="#">Two</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr />
+
+    <h2>!important可以用来覆盖所有优先级计算，用于修改特定属性的值，能够覆普通规则的层叠</h2>
+
+    <p class="better">This is a paragraph.</p>
+    <p class="better" id="winning">One selector to rule them all!</p>
+
+</body>
+
+</html>

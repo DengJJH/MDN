@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p,
+        ul {
+            border: 2px solid rebeccapurple;
+            padding: .5em;
+        }
+
+        .block,
+        li {
+            border: 2px solid blue;
+            padding: .5em;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>块级盒子（Block box）和内联盒子（Inline box）</h1>
+    <p>被定义成块级的盒子会表现出一下行为：</p>
+    <ul>
+        <li>盒子会在内联的方向上扩展并占据父容器在该方向上的所有可用空间，在绝大多数情况下意味着盒子会和父容器一样宽</li>
+        <li>每个盒子都会换行</li>
+        <li>width和height属性可以发挥作用</li>
+        <li>padding内边距，margin外边距和border边框会将其他元素从当前盒子周围"推开"</li>
+    </ul>
+    <p>例如h1和p都是块级盒子</p>
+    <p>如果一盒子对外显示为inline，那么他的行为如下：</p>
+    <ul>
+        <li>盒子不会产生换行</li>
+        <li>width和height属性将不起作用</li>
+        <li>内边距、外边距以及边框会被应用但是不会把其他处于inline状态的盒子推开</li>
+    </ul>
+    <p>例如a、span、em以及strong都是默认处于inline状态的</p>
+    <p><strong>通过对盒子display属性的设置，修改inline或者block，来控制盒子的外部显示类型</strong></p>
+    <p>块级和内联布局是web上的默认行为，有时候被称为<strong>正常文档流</strong></p> -->
+    <p>I am a paragraph. A short one.</p>
+    <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+    <p>I am another paragraph. Some of the <span class="block">words</span> have been wrapped in a <span>span
+            element</span>.</p>
+
+</body>
+
+</html>
