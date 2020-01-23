@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .one {
+            margin-bottom: 50px;
+        }
+
+        .two {
+            margin-top: 30px;
+        }
+
+        .container {
+            width: 600px;
+            height: 450px;
+            border: 5px solid blue;
+        }
+
+        p {
+            background-color: #ccc;
+            border: 5px solid rebeccapurple;
+            padding: 5px;
+        }
+
+        .container1 {
+            border-top: 5px dotted green;
+            border-right: 1px solid black;
+            border-bottom: 20px double rgb(23, 45, 145);
+        }
+
+        .box1 {
+            border: 1px solid #333333;
+            border-top-style: dotted;
+            border-right-width: 20px;
+            border-bottom-color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <p class="one">I am paragraph one.</p>
+        <p class="two">I am paragraph two.</p>
+        第一个p的下外边距margin-bottom是50px<br>
+        第二个p的上外边距margin-top是30px<br>
+        以上是外边距折叠产生的效果，即距离会重合，以大的数值为标准
+    </div>
+
+    <hr>
+    <h3>边框效果</h3>
+    <div class="container1">
+        <div class="box1">Change my borders.</div>
+    </div>
+
+    
+</body>
+
+</html>

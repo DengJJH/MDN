@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            margin: 20px;
+            padding: 20px;
+            width: 80px;
+            height: 50px;
+            background-color: lightblue;
+            border: 2px solid blue;
+        }
+
+        .compare {
+            margin: 20px;
+            padding: 20px;
+            width: 80px;
+            height: 50px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            display: inline-block;
+        }
+
+        p {
+            width: 300px;
+            height: 300px;
+            border: 1px solid rebeccapurple;
+        }
+
+        .links-list a {
+            background-color: rgb(179, 57, 81);
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            
+        }
+
+        .links-list a:hover {
+            background-color: rgb(66, 28, 40);
+            color: #fff;
+        }
+
+        .links-list li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        nav {
+            width: 800px;
+            height: 200px;
+            border: 1px solid black;
+            padding-left: 5rem;
+        }
+        ul {
+            width: 600px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        I am a paragraph and this is a <span>span</span> inside that paragraph. A span is an inline element and so does
+        not respect width and height.
+    </p>
+
+    <p>
+        I am a paragraph and this is a <span class="compare">span</span> inside that paragraph. A span is an inline
+        element and so does
+        not respect width and height.
+    </p>
+
+    <nav>
+        <ul class="links-list">
+            <li><a href="">Link one</a></li>
+            <li><a href="">Link two</a></li>
+            <li><a href="">Link three</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
